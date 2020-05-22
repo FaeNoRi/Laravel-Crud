@@ -50,12 +50,12 @@ function search() {
   @endif
 
   <div class="card-list-header" style="padding-bottom:10px;padding-top:10px"> 
-    <div class="text-warning">
+    <div class="text-home">
       @if(auth()->user()->isAdmin == 0)
-        <h3>Bonjour {{auth()->user()->name}} ! Vous etes connecté en temps que membre, vous pouvez donc uniquement consulter la liste des fiches !</h3><br>
+        <h3>Bonjour {{auth()->user()->name}} ! Vous êtes connecté en temps que membre, vous pouvez donc uniquement consulter la liste des fiches !</h3><br>
       @endif
       @if(auth()->user()->isAdmin == 1)
-        <h3>Bonjour {{auth()->user()->name}} ! Vous etes connecté en temps qu'administrateur, vous avez donc accès à la liste des fiches, ainsi qu'aux différentes fonctionnalités de gestion !</h3><br>
+        <h3>Bonjour {{auth()->user()->name}} ! Vous êtes connecté en temps qu'administrateur, vous avez donc accès à la liste des fiches, ainsi qu'aux différentes fonctionnalités de gestion !</h3><br>
       @endif
     </div>
     @if(auth()->user()->isAdmin == 1)
